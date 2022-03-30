@@ -3,14 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import Home from './Home';
-
+import Header from './Header';
 import Contact from './Contact';
-
+import Event from './Event';
+import Posts from './Posts';
 //npm install react-router-dom
 ReactDOM.render(
   <React.StrictMode>
-    <Home></Home>
+    <Router>
+    <Header></Header>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/contact" element={<Contact/>}></Route>
+        <Route path="/event" element={<Event/>}></Route>
+        <Route path="/posts" element={<Posts/>}></Route>
+      </Routes>
+    </Router>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
