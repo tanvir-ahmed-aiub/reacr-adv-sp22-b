@@ -9,6 +9,8 @@ import Header from './Header';
 import Contact from './Contact';
 import Event from './Event';
 import Posts from './Posts';
+import Login from './Login';
+import Register from './Register';
 //npm install react-router-dom
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +21,8 @@ ReactDOM.render(
         <Route path="/contact" element={<Contact/>}></Route>
         <Route path="/event" element={<Event/>}></Route>
         <Route path="/posts" element={<Posts/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/add" element={<Register/>}></Route>
       </Routes>
     </Router>
     
